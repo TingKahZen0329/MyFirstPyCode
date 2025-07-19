@@ -17,26 +17,3 @@ print("選取出 '產品名稱' 等於 '電腦' 的那筆資料:\n",shopeeDF[sho
 
 #挑戰題：選取出 '價格' 大於 15000 而且 (&) '庫存數量' 小於 150 的商品。
 print("選取出 '價格' 大於 15000 而且 (&) '庫存數量' 小於 150 的商品:\n",shopeeDF[(shopeeDF['價格'] > 15000 )&(shopeeDF['庫存數量']<150)])
-
-'''''
-# 建立一個條件：價格是否大於 30000?
-condition = df['價格'] > 30000
-print("--- 條件 (布林遮罩) ---")
-print(condition)
-
-# 把遮罩放進 DataFrame
-high_price_products = df[condition]
-print("\n--- 價格昂貴的商品 ---")
-print(high_price_products)
-
-high_price_products = df[df['價格'] > 30000]
-print("\n--- (一行完成) 價格昂貴的商品 ---")
-print(high_price_products)
-
-# 找出「價格 > 15000」 而且 「庫存 < 50」的商品
-# (df['價格'] > 15000) & (df['庫存數量'] < 50)
-best_deals = df[(df['價格'] > 15000) & (df['庫存數量'] < 50)]
-
-print("\n--- 高價且稀有的商品 ---")
-print(best_deals)
-'''
