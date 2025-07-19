@@ -11,9 +11,9 @@ print("類似for的陣列: ", arr_arange)
 npPrintData(arr_arange)
 
 # 使用 np.zeros() 建立一個 4x5 (4列5行) 的二維陣列。
-arr_ones = np.ones((4, 5))
-print("用1畫出形狀的陣列:\n", arr_ones) 
-npPrintData(arr_ones)
+arr_zeros = np.zeros((4, 5))
+print("用0畫出形狀的陣列:\n", arr_zeros) 
+npPrintData(arr_zeros)
 
 #使用 np.linspace() 建立一個從 0 到 1，總共有 11 個元素的陣列 (也就是 0, 0.1, 0.2, ..., 1.0)
 arr_linspace = np.linspace(0, 1, 11)
