@@ -23,9 +23,9 @@ print(productAndStockQuaOfShopee)
 print("--------------------------")
 
 #使用 .loc 選取第二筆商品的所有資料 (列標籤為 1 的那一行)，並印出來
-ComputerInformation = shopeeDF.loc[1]
+computerInformation = shopeeDF.loc[1]
 print("---電腦的所有資料---")
-print(ComputerInformation)
+print(computerInformation)
 print("--------------------------")
 
 #挑戰題：使用 .loc 選取第一筆商品 (列標籤為 0) 的 '價格'，並印出來
