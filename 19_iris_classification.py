@@ -89,3 +89,30 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"\n模型在測試集上的準確率 (Accuracy): {accuracy:.2%}") # .2% 會將數字格式化為百分比
 # 觀察結果：看看最後印出來的「準確率」有多高？這個數字代表在模型從沒見過的測試集數據中，它答對了百分之多少的題目
 # 模型在測試集上的準確率 (Accuracy): 100.00%
+
+# (你之前的程式碼...)
+# y_pred = model.predict(X_test)
+# accuracy = accuracy_score(y_test, y_pred)
+# print(f"\n模型在測試集上的準確率 (Accuracy): {accuracy:.2%}")
+
+# --- 11. 建立並視覺化混淆矩陣 ---
+from sklearn.metrics import confusion_matrix
+import seaborn as sns # 我們用 seaborn 來畫出更漂亮的圖
+
+# 計算混淆矩陣
+conf_matrix = confusion_matrix(y_test, y_pred)
+print("\n混淆矩陣:\n", conf_matrix)
+
+# 使用 seaborn 的 heatmap 來視覺化混淆矩陣
+plt.figure(figsize=(8, 6)) # 設定圖的大小
+sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', 
+            xticklabels=iris_dataset.target_names, 
+            yticklabels=iris_dataset.target_names)
+
+plt.xlabel('預測的品種 (Predicted)')
+plt.ylabel('真實的品種 (Actual)')
+plt.title('混淆矩陣')
+# ------------------------------------
+
+# 最後才顯示所有圖表
+plt.show()
